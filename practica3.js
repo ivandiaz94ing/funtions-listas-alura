@@ -88,7 +88,7 @@ function mostrarIndiceLista(num){
 
     for (const key in listaNumerica) {
        
-        if(num = listaNumerica[key]){
+        if(num == listaNumerica[key]){
             apuntador = key;
         }
     }
@@ -96,8 +96,38 @@ function mostrarIndiceLista(num){
         console.log(`El numero ${num} esta en la posicion ${apuntador}`);
     }else{
         console.log(`El numero ${num} esta en la posicion ${-1}`);
-    }
-    
+    }   
+}
+mostrarIndiceLista(53);
+
+//10. Crea una función que reciba dos listas de números del mismo tamaño y devuelva
+//       una nueva lista con la suma de los elementos uno a uno.
+
+let lista1 = [7, 6, 9, 10, 9];
+let lista2 = [56, 55, 2, 99, 77];
+let lista3 = [];
+
+function sumarListas(listaA, listaB){
+
+for (let i = 0; i < lista1.length; i++) {
+    lista3.push(listaA[i] + listaB[i]);
 }
 
-mostrarIndiceLista();
+console.log(lista3);
+}
+
+sumarListas(lista1, lista2);
+
+
+//11. Crea una función que reciba una lista de números y devuelva una nueva lista con el cuadrado
+//       de cada número.
+let lista4 = [];
+function listaCuadrado(lista){
+    lista.forEach(element => {
+        lista4.push(element*element);
+    });
+}
+
+listaCuadrado(lista1);
+
+console.log(lista4);
